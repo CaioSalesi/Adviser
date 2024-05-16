@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container-fluid">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="position:absolute; right:0px; left:0px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Selecione o seu documento</h5>
+            </div>
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <div class="modal-body">
+                    <div class="mb-0">
+                            <input class="form-control form-control-lg" type="file" id="formFile" name="file">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary">Confirmar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
