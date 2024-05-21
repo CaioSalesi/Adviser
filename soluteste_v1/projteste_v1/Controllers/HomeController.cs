@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using System.IO;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
+using System.Linq;
 
 namespace projteste_v1.Controllers
 {
@@ -22,6 +23,7 @@ namespace projteste_v1.Controllers
 
         public IActionResult Index()
         {
+            if (TempData["sucesso"] == null) { TempData["sucesso"] = false; }
             return View();
         }
 
@@ -30,11 +32,25 @@ namespace projteste_v1.Controllers
         {
             if (file == null || file.Length == 0)
             {
-                return Content("Arquivo não selecionado");
+                TempData["erro"] = true;
+                return RedirectToAction("Index");
             }
 
             var uploadsPath = Path.Combine(_environment.WebRootPath, "uploads");
+            var logsPath = Path.Combine(_environment.WebRootPath, "logs");
 
+            // Ensure the upload and log directories exist
+            if (!Directory.Exists(uploadsPath))
+            {
+                Directory.CreateDirectory(uploadsPath);
+            }
+
+            if (!Directory.Exists(logsPath))
+            {
+                Directory.CreateDirectory(logsPath);
+            }
+
+            // Determine the next file name
             var files = Directory.GetFiles(uploadsPath);
             int maxNumber = files.Select(f => Path.GetFileNameWithoutExtension(f))
                                  .Where(name => int.TryParse(name, out _))
@@ -45,18 +61,37 @@ namespace projteste_v1.Controllers
             var fileName = $"{nextNumber:D8}{Path.GetExtension(file.FileName)}";
             var path = Path.Combine(uploadsPath, fileName);
 
+            // Save the uploaded file
             using (var stream = new FileStream(path, FileMode.Create))
             {
                 await file.CopyToAsync(stream);
             }
 
-            return RedirectToAction("Index"); // ou outra ação relevante
-        }
+            // Update the files list and max number for logging success
+            files = Directory.GetFiles(uploadsPath);
+            maxNumber = files.Select(f => Path.GetFileNameWithoutExtension(f))
+                             .Where(name => int.TryParse(name, out _))
+                             .Select(int.Parse)
+                             .DefaultIfEmpty(0)
+                             .Max();
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            if (nextNumber == maxNumber)
+            {
+                TempData["sucesso"] = true;
+            }
+            else
+            {
+                TempData["sucesso"] = false;
+            }
+
+            // Create a log entry
+            var logFilePath = Path.Combine(logsPath, "upload_log.txt");
+            var logMessage = $"File uploaded: {fileName} at {DateTime.Now}\n";
+
+            // Write the log entry
+            await System.IO.File.AppendAllTextAsync(logFilePath, logMessage);
+
+            return RedirectToAction("Index");
         }
     }
 }

@@ -11,6 +11,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Views\Home\MLModel.mbconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\NovaPasta\NovaPasta\" />
   </ItemGroup>
 
