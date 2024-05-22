@@ -245,6 +245,10 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\caio.salesi\\Documents\\Estudos\\Adviser\\soluteste_v1\\projteste_v1\\wwwroot\\logs\\upload_log.txt",
+      "PackagePath": "staticwebassets\\logs\\upload_log.txt"
+    },
+    {
       "Id": "C:\\Users\\caio.salesi\\Documents\\Estudos\\Adviser\\soluteste_v1\\projteste_v1\\wwwroot\\uploads\\00000001.pdf",
       "PackagePath": "staticwebassets\\uploads\\00000001.pdf"
     },
@@ -253,16 +257,16 @@
       "PackagePath": "staticwebassets\\uploads\\00000002.docx"
     },
     {
-      "Id": "C:\\Users\\caio.salesi\\Documents\\Estudos\\Adviser\\soluteste_v1\\projteste_v1\\wwwroot\\uploads\\00000003.png",
-      "PackagePath": "staticwebassets\\uploads\\00000003.png"
+      "Id": "C:\\Users\\caio.salesi\\Documents\\Estudos\\Adviser\\soluteste_v1\\projteste_v1\\wwwroot\\uploads\\00000003.pdf",
+      "PackagePath": "staticwebassets\\uploads\\00000003.pdf"
     },
     {
       "Id": "C:\\Users\\caio.salesi\\Documents\\Estudos\\Adviser\\soluteste_v1\\projteste_v1\\wwwroot\\uploads\\00000004.pdf",
       "PackagePath": "staticwebassets\\uploads\\00000004.pdf"
     },
     {
-      "Id": "C:\\Users\\caio.salesi\\Documents\\Estudos\\Adviser\\soluteste_v1\\projteste_v1\\wwwroot\\uploads\\00000005.csv",
-      "PackagePath": "staticwebassets\\uploads\\00000005.csv"
+      "Id": "C:\\Users\\caio.salesi\\Documents\\Estudos\\Adviser\\soluteste_v1\\projteste_v1\\wwwroot\\uploads\\00000005.docx",
+      "PackagePath": "staticwebassets\\uploads\\00000005.docx"
     },
     {
       "Id": "C:\\Users\\caio.salesi\\Documents\\Estudos\\Adviser\\soluteste_v1\\projteste_v1\\wwwroot\\uploads\\00000006.pdf",
@@ -277,84 +281,12 @@
       "PackagePath": "staticwebassets\\uploads\\00000008.pdf"
     },
     {
-      "Id": "C:\\Users\\caio.salesi\\Documents\\Estudos\\Adviser\\soluteste_v1\\projteste_v1\\wwwroot\\uploads\\00000009.pdf",
-      "PackagePath": "staticwebassets\\uploads\\00000009.pdf"
+      "Id": "C:\\Users\\caio.salesi\\Documents\\Estudos\\Adviser\\soluteste_v1\\projteste_v1\\wwwroot\\uploads\\00000009.docx",
+      "PackagePath": "staticwebassets\\uploads\\00000009.docx"
     },
     {
       "Id": "C:\\Users\\caio.salesi\\Documents\\Estudos\\Adviser\\soluteste_v1\\projteste_v1\\wwwroot\\uploads\\00000010.pdf",
       "PackagePath": "staticwebassets\\uploads\\00000010.pdf"
-    },
-    {
-      "Id": "C:\\Users\\caio.salesi\\Documents\\Estudos\\Adviser\\soluteste_v1\\projteste_v1\\wwwroot\\uploads\\00000011.pdf",
-      "PackagePath": "staticwebassets\\uploads\\00000011.pdf"
-    },
-    {
-      "Id": "C:\\Users\\caio.salesi\\Documents\\Estudos\\Adviser\\soluteste_v1\\projteste_v1\\wwwroot\\uploads\\00000012.pdf",
-      "PackagePath": "staticwebassets\\uploads\\00000012.pdf"
-    },
-    {
-      "Id": "C:\\Users\\caio.salesi\\Documents\\Estudos\\Adviser\\soluteste_v1\\projteste_v1\\wwwroot\\uploads\\00000013.pdf",
-      "PackagePath": "staticwebassets\\uploads\\00000013.pdf"
-    },
-    {
-      "Id": "C:\\Users\\caio.salesi\\Documents\\Estudos\\Adviser\\soluteste_v1\\projteste_v1\\wwwroot\\uploads\\00000014.pdf",
-      "PackagePath": "staticwebassets\\uploads\\00000014.pdf"
-    },
-    {
-      "Id": "C:\\Users\\caio.salesi\\Documents\\Estudos\\Adviser\\soluteste_v1\\projteste_v1\\wwwroot\\uploads\\00000015.pdf",
-      "PackagePath": "staticwebassets\\uploads\\00000015.pdf"
-    },
-    {
-      "Id": "C:\\Users\\caio.salesi\\Documents\\Estudos\\Adviser\\soluteste_v1\\projteste_v1\\wwwroot\\uploads\\00000016.pdf",
-      "PackagePath": "staticwebassets\\uploads\\00000016.pdf"
-    },
-    {
-      "Id": "C:\\Users\\caio.salesi\\Documents\\Estudos\\Adviser\\soluteste_v1\\projteste_v1\\wwwroot\\uploads\\00000017.pdf",
-      "PackagePath": "staticwebassets\\uploads\\00000017.pdf"
-    },
-    {
-      "Id": "C:\\Users\\caio.salesi\\Documents\\Estudos\\Adviser\\soluteste_v1\\projteste_v1\\wwwroot\\uploads\\00000018.pdf",
-      "PackagePath": "staticwebassets\\uploads\\00000018.pdf"
-    },
-    {
-      "Id": "C:\\Users\\caio.salesi\\Documents\\Estudos\\Adviser\\soluteste_v1\\projteste_v1\\wwwroot\\uploads\\00000019.pdf",
-      "PackagePath": "staticwebassets\\uploads\\00000019.pdf"
-    },
-    {
-      "Id": "C:\\Users\\caio.salesi\\Documents\\Estudos\\Adviser\\soluteste_v1\\projteste_v1\\wwwroot\\uploads\\00000020.pdf",
-      "PackagePath": "staticwebassets\\uploads\\00000020.pdf"
-    },
-    {
-      "Id": "C:\\Users\\caio.salesi\\Documents\\Estudos\\Adviser\\soluteste_v1\\projteste_v1\\wwwroot\\uploads\\00000021.pdf",
-      "PackagePath": "staticwebassets\\uploads\\00000021.pdf"
-    },
-    {
-      "Id": "C:\\Users\\caio.salesi\\Documents\\Estudos\\Adviser\\soluteste_v1\\projteste_v1\\wwwroot\\uploads\\00000022.csv",
-      "PackagePath": "staticwebassets\\uploads\\00000022.csv"
-    },
-    {
-      "Id": "C:\\Users\\caio.salesi\\Documents\\Estudos\\Adviser\\soluteste_v1\\projteste_v1\\wwwroot\\uploads\\00000023.exe",
-      "PackagePath": "staticwebassets\\uploads\\00000023.exe"
-    },
-    {
-      "Id": "C:\\Users\\caio.salesi\\Documents\\Estudos\\Adviser\\soluteste_v1\\projteste_v1\\wwwroot\\uploads\\00000024.pdf",
-      "PackagePath": "staticwebassets\\uploads\\00000024.pdf"
-    },
-    {
-      "Id": "C:\\Users\\caio.salesi\\Documents\\Estudos\\Adviser\\soluteste_v1\\projteste_v1\\wwwroot\\uploads\\00000025.pdf",
-      "PackagePath": "staticwebassets\\uploads\\00000025.pdf"
-    },
-    {
-      "Id": "C:\\Users\\caio.salesi\\Documents\\Estudos\\Adviser\\soluteste_v1\\projteste_v1\\wwwroot\\uploads\\00000026.pdf",
-      "PackagePath": "staticwebassets\\uploads\\00000026.pdf"
-    },
-    {
-      "Id": "C:\\Users\\caio.salesi\\Documents\\Estudos\\Adviser\\soluteste_v1\\projteste_v1\\wwwroot\\uploads\\00000027.pdf",
-      "PackagePath": "staticwebassets\\uploads\\00000027.pdf"
-    },
-    {
-      "Id": "C:\\Users\\caio.salesi\\Documents\\Estudos\\Adviser\\soluteste_v1\\projteste_v1\\wwwroot\\uploads\\00000028.pdf",
-      "PackagePath": "staticwebassets\\uploads\\00000028.pdf"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.projteste_v1.props",

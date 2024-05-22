@@ -58,6 +58,22 @@
     </div>
 </div>
 
+<div class="modal fade" id="maiorModal" tabindex="-1" role="dialog" aria-labelledby="maiorModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="maiorModalLabel">Erro</h5>
+            </div>
+            <div class="modal-body">
+                Seu arquivo é maior do que o permitido. Por favor, selecionar um arquivo de até 100mb.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("Index", "Home")'">Confirmar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 @section Scripts {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -70,6 +86,18 @@
             } else if (erro) {
                 $('#errorModal').modal('show');
             }
+
+            // Limitação de tamanho de arquivo (em bytes)
+            var maxFileSize = 1024 * 1024; // 1 MB
+
+            $('#formFile').on('change', function () {
+                console.log("Entrei no Change de FormFile")
+                var file = this.files[0];
+                if (file && file.size > maxFileSize) {
+                    $('#maiorModal').modal('show');
+                    this.value = ''; // Limpa o campo de input
+                }
+            });
         });
     </script>
 }
