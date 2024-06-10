@@ -1,0 +1,103 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var sucesso = TempData["sucesso"] != null && (bool)TempData["sucesso"];
+    var erro = TempData["erro"] != null && (bool)TempData["erro"];
+}
+
+<div class="container-fluid">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="position:absolute; right:0px; left:0px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Selecione o seu documento</h5>
+            </div>
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <div class="modal-body">
+                    <div class="mb-0">
+                        <input class="form-control form-control-lg" type="file" id="formFile" name="file">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary">Confirmar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Sucesso -->
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="successModalLabel">Sucesso</h5>
+            </div>
+            <div class="modal-body">
+                Upload realizado com sucesso!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("Index", "Home")'">Confirmar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Erro -->
+<div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="errorModalLabel">Erro</h5>
+            </div>
+            <div class="modal-body">
+                Nenhum arquivo selecionado. Por favor, selecione um arquivo para fazer o upload.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("Index", "Home")'">Confirmar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="maiorModal" tabindex="-1" role="dialog" aria-labelledby="maiorModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="maiorModalLabel">Erro</h5>
+            </div>
+            <div class="modal-body">
+                Seu arquivo é maior do que o permitido. Por favor, selecionar um arquivo de até 100mb.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("Index", "Home")'">Confirmar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var sucesso = @sucesso.ToString().ToLower();
+            var erro = @erro.ToString().ToLower();
+            if (sucesso) {
+                $('#successModal').modal('show');
+            } else if (erro) {
+                $('#errorModal').modal('show');
+            }
+
+            // Limitação de tamanho de arquivo (em bytes)
+            var maxFileSize = 1024 * 1024; // 1 MB
+
+            $('#formFile').on('change', function () {
+                console.log("Entrei no Change de FormFile")
+                var file = this.files[0];
+                if (file && file.size > maxFileSize) {
+                    $('#maiorModal').modal('show');
+                    this.value = ''; // Limpa o campo de input
+                }
+            });
+        });
+    </script>
+}
